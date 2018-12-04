@@ -1,129 +1,81 @@
 ﻿<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<title>Gonna Catch'em All</title>
-		<link rel="shortcut icon" type="image/png" href="icons/favicon.png"/>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-		<script type="text/javascript">
-		             $(document).ready(function() {
-				var btn = document.getElementsByClassName('choice');
-				var link = document.getElementsByClassName('button');
-				for(i=0; i<btn.length;i++) {
-					var btn_value = btn[i].options[btn[i].selectedIndex].value;
-					link[i].href = btn_value;
-				};
-		        		var now = new Date();
-				var hour    = now.getHours();
-				var minute  = now.getMinutes();
-				var day = now.getDay();
-				var L = ["mon.", "tues.", "wed.", "thurs.", "fri.", "sat.","sun."];
-				if(hour < 10) {
-					hour = "0" + hour;
-				}
-				if (day > 0) {
-					day = day-1;
-				}
-				if (day == 0) {
-					day = 6;
-				}
-				if (minute < 10) {
-					minute = "0" + minute;
-				};
-				document.getElementById("time_box").innerHTML = hour + "'" + minute;
-				document.getElementById("day_box").innerHTML = L[day];
-			});	
-		 </script>
-	</head>
-	<body>
-		<div id="container">
-			<div id="banner">
-				<div id="message">
-					<div id="message_box">× welcome ×</div>
-				</div>
-				<div id="time_box"></div>
-				<div id="day_box"></div>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Startpage</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/brands.css" integrity="sha384-QT2Z8ljl3UupqMtQNmPyhSPO/d5qbrzWmFxJqmY7tqoTuT2YrQLEqzvVOP2cT5XW"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+	 crossorigin="anonymous">
+</head>
+
+<body>
+	<div id="container">
+		<div id="banner">
+			<div id="message">
+				<div id="message_box">× welcome ×</div>
 			</div>
-	                           <div class="form">
-	                           		<input  id="searchbox" name="q" type="text" autocomplete="off" class="cleardefault" maxlength="100"   placeholder="search for inspiration." size="17" autofocus="autofocus" />
-	                         	              <input type="submit" id="image-button" value=""></input>
-	                           </div>
-			<div id="main">
-				<div class="card" style="background-color: #42729B; color: #4387B5;">
-					<a class="button">
-						<img src="avatar/avatar_01.png" class="avatar"></img>
-					</a>
-					<p>4chan</p>
-					<select onchange="if (this.value) window.location.href=this.value, this.selected;" class="choice">
-						<option value="https://boards.4chan.org/a/">ANIME</option>
-						<option value="https://boards.4chan.org/v/">GAMES</option>
-						<option value="https://boards.4chan.org/vg/">GENERALS</option>
-						<option value="https://boards.4chan.org/wg/">RICE</option>
-					</select>
-				</div>
-				<div class="card" style="background-color: #FCB941; color: #F0A830;">
-					<a class="button">
-						<img src="avatar/avatar_02.png" class="avatar"></img>
-					</a>
-					<p>アニメ</p>
-					<select onchange="if (this.value) window.location.href=this.value"" class="choice">
-						<option value="http://kissanime.ru/">kissanime.ru</option>
-						<option value="https://nyaa.si/">nyaa.si</option>
-						<option value="https://animebytes.tv/">animebytes</option>
-						<option value="https://bato.to/">bato.to</option>
-					</select>
-				</div>
-				<div class="card" style="background-color: #7E3661; color: #E6567A;">
-					<a class="button">
-						<img src="avatar/avatar_03.png" class="avatar"></img>
-					</a>
-					<p>へんたい</p>
-					<select onchange="if (this.value) window.location.href=this.value"" class="choice">
-						<option value="https://exhentai.org/">sadpanda.org</option>
-						<option value="https://nhentai.net/">nhentai.net</option>
-						<option value="https://hitomi.la"/>hitomi.la</option>
-						<option value="https://sukebei.nyaa.si/">sukebei.nyaa.si</option>
-					</select>
-				</div>
-				<div class="card" style="background-color: #4D545E; color: #4D545E;">
-					<a class="button">
-						<img src="avatar/avatar_04.png" class="avatar"></img>
-					</a>
-					<p>music</p>
-					<select onchange="if (this.value) window.location.href=this.value"" class="choice">
-						<option value="https://www.youtube.com/">youtube</option>
-						<option value="https://soundcloud.com/">soundcloud</option>
-						<option value="https://dojin.co/">dojin.co</option>
-						<option value="https://bandcamp.com/">bandcamp</option>
-					</select>
-				</div>
-				<div class="card" style="background-color: #E26E67; color: #E74C3C;">
-					<a class="button">
-						<img src="avatar/avatar_05.png" class="avatar"></img>
-					</a>
-					<p>art</p>
-					<select onchange="if (this.value) window.location.href=this.value"" class="choice">
-						<option value="https://www.pixiv.net/">pixiv.net</option>
-						<option value="https://www.deviantart.com/">deviantart</option>
-						<option value="https://www.tumblr.com/dashboard">tumblr</option>
-						<option value="https://danbooru.donmai.us/">danbooru</option>
-					</select>
-				</div>
-				<div class="card" style="background-color: #2CC990; color: #2CC990;">
-					<a class="button">
-						<img src="avatar/avatar_06.png" class="avatar"></img>
-					</a>
-					<p>misc</p>
-					<select onchange="if (this.value) window.location.href=this.value"" class="choice">
-						<option value="https://github.com/Catgrills">github</option>
-						<option value="https://greasyfork.org/en">greasyfork</option>
-						<option value="http://flatcolors.net/">flatcolors</option>
-						<option value="https://www.dealabs.com/">dealabs</option>
-					</select>
-				</div>
-			</div>
+			<div id="time_box"></div>
+			<div id="day_box"></div>
 		</div>
-	</body>
-	<script type="text/javascript" src="js/search.js"></script>
+		<div id="main">
+			<div class="card" style="background-color: #009688; color: #009688;">
+				<a class="button" href="https://web.whatsapp.com/">
+					<span style="color:#fff">
+						<i class="brand fab fa-whatsapp fa-10x"></i>
+					</span>
+				</a>
+				<p>Whatsapp</p>
+
+			</div>
+			<div class="card" style="background-color: #82c91e; color: #82c91e;">
+				<a class="button" href="https://open.spotify.com/browse">
+					<span style="color:#fff">
+						<i class="brand fab fa-spotify fa-10x"></i>
+					</span>
+				</a>
+				<p>Spotify</p>
+
+			</div>
+			<div class="card" style="background-color: #c91e1e; color: #c91e1e;">
+				<a class="button" href="https://youtube.com">
+					<span style="color:#fff">
+						<i class="brand fab fa-youtube fa-10x"></i>
+					</span>
+				</a>
+				<p>Youtube</p>
+			</div>
+
+			<div class="card" style="background-color: #408ea3; color: #408ea3;">
+				<a class="button" href="https://bandcamp.com">
+					<span style="color:#fff">
+						<i class="brand fab fa-bandcamp fa-10x"></i>
+					</span>
+				</a>
+				<p>Bandcamp</p>
+			</div>
+
+			<div class="card" style="background-color: #f50; color: #f50;">
+				<a class="button" href="https://soundcloud.com">
+					<span style="color:#fff">
+						<i class="brand fab fa-soundcloud fa-10x"></i>
+					</span>
+				</a>
+				<p>Soundcloud</p>
+			</div>
+
+			<div class="card" style="background-color: #05cc47; color: #05cc47;">
+				<a class="button" href="https://www.deviantart.com">
+					<span style="color:#fff">
+						<i class="brand fab fa-deviantart fa-10x"></i>
+					</span>
+				</a>
+				<p>Deviantart</p>
+			</div>
+			
+		</div>
+</body>
+
 </html>

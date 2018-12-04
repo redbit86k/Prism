@@ -1,5 +1,5 @@
 	* {
-	    	font-family: "Roboto", "ぼくたちのゴシック２ボールド" !important;
+	    	/* font-family: "Roboto", "ぼくたちのゴシック２ボールド" !important; */
 	    	outline: none;
 	}
 	html,
@@ -18,9 +18,9 @@
 		text-align: center;
 	}
 	#banner {
-		background: no-repeat url("background/background_01.png") center 60%;
+		background: no-repeat url("background/background_01.jpg") center 60%;
 		background-size: cover;
-		height: 25%;
+		height: 60%;
 		width: 100%
 	}
 	#banner #message {
@@ -110,6 +110,9 @@
 		box-shadow: 0px 1px 2px rgba(0,0,0,.1);
 		height: 8.5vw;
 		width: 8.5vw;
+		margin-top: 30px;
+	}
+	.card .brand {
 		margin-top: 30px;
 	}
 	.card p {
